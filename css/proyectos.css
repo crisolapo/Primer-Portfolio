@@ -2,6 +2,8 @@
     max-width: 120vh;
     margin: 0 auto;
     padding: 20px;
+    position: relative;
+    z-index: 99;
 
     img {
         width: 100%;

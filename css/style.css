@@ -5,23 +5,23 @@
 }
 
 body {
+    
+
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     line-height: 1.6;
     padding: 20px;
+    
+
+    #particles-js {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: -99;
+    }
 }
 
 header {
     position: relative;
-
-    nav{
-        width: 100%;
-        background-color: #000C13;
-        border-radius: 10px;
-        display: flex;
-        text-align: center;
-        padding-top: 1rem;
-    }
 
     p {
         color: #ffffff;
@@ -30,6 +30,10 @@ header {
         margin-left: 1rem;
         align-items: center;
         justify-content: center;
+    }
+
+    ul {
+        justify-content: end;
     }
 
     li {
@@ -47,7 +51,6 @@ header {
     svg {
         position: absolute;
         top: 10px;
-        right: 10px;
         cursor: pointer;
         color: #ffffff;
     }

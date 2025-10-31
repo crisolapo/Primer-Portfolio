@@ -28,3 +28,33 @@ document.addEventListener('DOMContentLoaded', () => {
 	document.addEventListener('click', (e) => { if (!nav.contains(e.target)) close(); });
 	window.addEventListener('resize', () => { if (window.innerWidth > 768) close(); });
 });
+
+
+// Cerrar el menú móvil al hacer clic en un enlace
+const mobileLinks = document.querySelectorAll('.hamb-mobile-list li a');
+mobileLinks.forEach(link => {
+	link.addEventListener('click', () => {
+		const menu = document.querySelector('.hamb-mobile-menu');
+		if (menu) {
+			menu.classList.remove('show');
+			const svg = document.querySelector('nav svg.hamburguesa');
+			if (svg) {
+				svg.setAttribute('aria-expanded', 'false');
+			}
+		}
+	});
+});
+
+// Cerrar el menú móvil al cambiar el tamaño de la ventana
+window.addEventListener('resize', () => {
+	if (window.innerWidth > 768) {
+		const menu = document.querySelector('.hamb-mobile-menu');
+		if (menu) {
+			menu.classList.remove('show');
+			const svg = document.querySelector('nav svg.hamburguesa');
+			if (svg) {
+				svg.setAttribute('aria-expanded', 'false');
+			}
+		}
+	}
+});
