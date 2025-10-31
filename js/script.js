@@ -111,3 +111,38 @@ particlesJS(
   "retina_detect": true
 }
 );
+
+// JS para manejar el formulario de contacto usando mailto:
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contactForm');
+  if (!form) return; // no hay formulario, nada que hacer
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const recipient = form.dataset.recipient || 'crisdevapo@gmail.com';
+    if (!recipient || recipient === 'crisdevapo@gmail.com') {
+      // Aviso al usuario para que reemplace el email por uno real
+      const proceed = confirm('El destinatario del formulario está configurado como "crisdevapo@gmail.com". ¿Deseas continuar de todos modos? (Reemplaza el correo en data-recipient por tu email para funcionar correctamente)');
+      if (!proceed) return;
+    }
+
+    const name = encodeURIComponent(document.getElementById('name').value.trim());
+    const from = encodeURIComponent(document.getElementById('email').value.trim());
+    const subject = encodeURIComponent(document.getElementById('subject').value.trim());
+    const message = encodeURIComponent(document.getElementById('message').value.trim());
+
+    const bodyLines = [
+      `Nombre: ${name}`,
+      `Correo: ${from}`,
+      '',
+      `${message}`
+    ];
+    const body = encodeURIComponent(bodyLines.join('\n'));
+
+    const mailto = `mailto:${recipient}?subject=${subject}&body=${body}`;
+
+    // Abrir el cliente de correo del usuario
+    window.location.href = mailto;
+  });
+});
