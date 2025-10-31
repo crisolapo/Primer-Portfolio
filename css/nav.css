@@ -1,5 +1,58 @@
+svg.hamburguesa { 
+    display: none;
+}
+
+@media (max-width: 768px) {
+	svg.hamburguesa {
+        display: inline-block;
+        position: absolute; 
+        right: 8px; top: 50%; 
+        transform: translateY(-50%); 
+    }
+	nav > ul { 
+        display: none !important; 
+    }
+	.hamb-mobile-menu.show { 
+        display: block; 
+    }
+}
+
 nav { 
-    position: relative; 
+    width: 100%;
+    background-color: #000000;
+    border-radius: 10px;
+    display: flex;
+    text-align: center;
+    padding-top: 1rem;
+
+    svg {
+        position: absolute;
+        top: 10px;
+        cursor: pointer;
+        color: #ffffff;
+    }
+
+    li {
+    list-style: none;
+    display: inline;
+    margin: 0 1vh;
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    }
+
+    p {
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: bold;
+        margin-left: 1rem;
+        align-items: center;
+        justify-content: center;
+    }
+
 
     .hamb-mobile-menu {
 	    display: none;
@@ -24,17 +77,4 @@ nav {
         color: #111; 
         text-decoration: none; 
     }
-    
-
-
-}
-
-svg.hamburguesa { 
-    display: none; 
-}
-
-@media (max-width: 768px) {
-	svg.hamburguesa { display: inline-block; position: absolute; right: 8px; top: 50%; transform: translateY(-50%); }
-	nav > ul { display: none !important; }
-	.hamb-mobile-menu.show { display: block; }
 }
