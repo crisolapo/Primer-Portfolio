@@ -36,11 +36,43 @@
     </header>
 
 
+    <br><br><br><br><br><br>
+
     <main>
         <!--? SOBRE MI -->
         <section id="about" class="d-flex">
-
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Imagen -->
+                    <div class="col-12 col-md-4 text-center mb-4 mb-md-0">
+                        <img src="img/me.png" alt="Mi foto" class="rounded-circle img-fluid mb-3" style="max-width: 250px;">
+                    </div>
+                    <!-- Tarjetas de texto -->
+                    <div class="col-12 col-md-8">
+                        <div class="row g-4">
+                            <div class="col-12 col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h3 class="card-title mb-3">¿Quién soy?</h3>
+                                        <p class="card-text">Soy un desarrollador web apasionado por crear experiencias digitales únicas. Me especializo en el desarrollo frontend y disfruto convirtiendo ideas en realidad a través del código.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-body">
+                                        <h3 class="card-title mb-3">Mi enfoque</h3>
+                                        <p class="card-text">Me centro en crear soluciones web eficientes y elegantes, combinando diseño atractivo con funcionalidad robusta. Siempre busco aprender nuevas tecnologías y mejorar mis habilidades.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <br><br><br><br><br><br>
 
         <!--? PROYECTOS -->
         <section id="projects">
@@ -71,7 +103,8 @@
                             </div>
                         </div>
                     </div>
-                    <br><br>
+                    
+                    <br><br><br>
 
                     <!--? PROYECTOS COLABORATIVOS -->
                     <h2 class="mb-4">Proyectos Colaboractivos</h2>
@@ -102,9 +135,38 @@
             
         </section>
 
+        <br><br><br><br><br><br>
+
         <!--? CONTACTO -->
-        <section id="contact">
-            
+        <section id="contact" class="py-5">
+            <div class="container">
+                <h2 class="mb-4">Contacto</h2>
+                <p class="mb-4">Escríbeme un mensaje y se abrirá tu cliente de correo para enviarlo directamente a mi dirección.</p>
+
+                <div class="row">
+                    <div class="col-12 col-md-8">
+                        <form id="contactForm" data-recipient="crisdevapo@gmail.com">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Tu correo</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Asunto</label>
+                                <input type="text" class="form-control" id="subject" name="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </main>
